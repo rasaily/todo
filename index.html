@@ -19,27 +19,27 @@
     </marquee>
 
     <div class="wrap">
-      <input ng-model = "newActivities" placeholder ="Add Time & Activities" type="text" class="addText">
+      <input ng-model = "newActivities" placeholder ="Add Time & Activities" type="text">
       <button ng-click ="pushActivities()" class="button">ADD</button>
     </div>
   </div>
   <ul>
     <li ng-repeat="i in Activities" class="strikethrough">
-      <input type="checkbox" ng-click="strikeTaskAsDone($index)">
+      <input type="checkbox">
+      <label>{{i}}</label>
 
-      <label for="">{{i}}</label>
-      <span ng-click="deleteActivities($index)"><div class="box-2">
-      <div class="btn btn-two">
-        <span>REMOVE</span>
-      </div>
-    </div></span>
+      <span ng-click="deleteActivities($index)">
+        <div class="box-2">
+          <div class="btn btn-two">
+            <span>REMOVE</span>
+          </div>
+        </div>
+      </span>
     </li>
-
   </ul>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 <script src="script.js"></script>
-
 </body>
 </html>
 

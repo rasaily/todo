@@ -1,12 +1,11 @@
 .main {
   width: 500px;
-  text-align:left;
+  text-align: left;
   margin: 0 auto;
   border: 2px solid #187218;
   margin-top: 10px;
   font-family: sans-serif;
-
-h1{
+}
 
 .example-section {
   margin: 12px 0;
@@ -45,10 +44,6 @@ ul {
 @keyframes marquee {
   0%   { transform: translate(0, 0); }
   100% { transform: translate(-100%, 0); }
-}
-
-}
-
 }
 
 .background{
