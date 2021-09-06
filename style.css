@@ -1,0 +1,282 @@
+.main {
+  width: 500px;
+  text-align:left;
+  margin: 0 auto;
+  border: 2px solid #187218;
+  margin-top: 10px;
+  font-family: sans-serif;
+
+h1{
+
+.example-section {
+  margin: 12px 0;
+}
+
+.example-margin {
+  margin: 0 12px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 4px;
+}
+.marquee {
+  width: 350px;
+  margin: 0 auto;
+  background: #d0d035;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  color:blue;
+  font-size:0px;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  text-indent: 0;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee span:hover {
+  animation-play-state: play-state;
+}
+
+@keyframes marquee {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+}
+
+}
+
+.background{
+  background-color: lightblue;
+}
+ul{
+  list-style: none;
+  font-size: 16px;
+  color: #000;
+  margin-left:20px;
+  margin-bottom: 50px;
+}
+
+li{
+  border-bottom: 1px solid #e5dbb7;
+  padding: 10px 0px;
+  margin-bottom: 5px;
+}
+
+li span{
+  cursor: pointer;
+  position: relative;
+  float: right;
+  margin-right: 10px;
+}
+.addItem{
+  position: relative;
+  padding-bottom: 0px;
+  height: 30px;
+}
+
+input[type=text]{
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid #2d9fd9;
+  color: #a0d18c;
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
+  margin-right: 5px;
+}
+
+input[type=text]:focus {
+  outline: none;
+  border: 2px solid #a0d18c;
+  color: #2d9fd9;
+}
+
+
+.addItem button{
+  height: 35px;
+  width: 50px;
+}
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+div[class*=box] {
+  height: 33.33%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-1 { background-color: #FF6766; }
+.box-2 { background-color: #3C3C3C; }
+.box-3 { background-color: #66A182; }
+
+.btn {
+  line-height: 20px;
+  height: 20px;
+  text-align: center;
+  width: 50px;
+  cursor: pointer;
+
+}
+/*
+========================
+      BUTTON TWO
+========================
+*/
+.btn-two {
+  color: #f3e9e9;
+  transition: all 0.5s;
+  position: relative;
+  font-size: 9px;
+}
+.btn-two span {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.btn-two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgb(243, 233, 233);
+  background-color: RED;
+}
+.btn-two::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: RED;
+}
+.btn-two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255,255,255,0);
+}
+.btn-two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255,255,255,0);
+}
+
+/* ADD BUTTON */
+
+
+/* button style */
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+}
+
+.button {
+  min-width: 100px;
+  min-height: 30px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+  background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 5px;
+}
+
+button::before {
+  content: '';
+  border-radius: 1000px;
+  min-width: calc(50px + 12px);
+  min-height: calc(30px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+
+input[type=checkbox]:checked + label {
+  text-decoration: line-through;
+  color:red;
+}

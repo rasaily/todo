@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="main" ng-app="myList" ng-controller="myListController">
+
+  <marquee class="background" behavior="alternate" ><h1>HI....Your To Do !!</h1></marquee>
+  <div class="add Adtivities">
+
+    <marquee behavior="scroll" bgcolor="yellow" loop="-1" width="100%">
+      <i><font color="#006400">
+        <strong>Today: <span id="time"></span></strong>
+        </font>
+      </i>
+    </marquee>
+
+    <div class="wrap">
+      <input ng-model = "newActivities" placeholder ="Add Time & Activities" type="text" class="addText">
+      <button ng-click ="pushActivities()" class="button">ADD</button>
+    </div>
+  </div>
+  <ul>
+    <li ng-repeat="i in Activities" class="strikethrough">
+      <input type="checkbox" ng-click="strikeTaskAsDone($index)">
+
+      <label for="">{{i}}</label>
+      <span ng-click="deleteActivities($index)"><div class="box-2">
+      <div class="btn btn-two">
+        <span>REMOVE</span>
+      </div>
+    </div></span>
+    </li>
+
+  </ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+
